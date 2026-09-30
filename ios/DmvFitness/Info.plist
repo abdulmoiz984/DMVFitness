@@ -34,9 +34,9 @@
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>JustFityy uses your location to find nearby gyms, trainers, and fitness events in your area.</string>
+	<string>DmvFitness uses your location to find nearby gyms, trainers, and fitness events in your area.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>JustFityy needs access to your photo library to let you upload a profile picture and share your fitness progress.</string>
+	<string>DmvFitness needs access to your photo library to let you upload a profile picture and share your fitness progress.</string>
 	<key>RCTNewArchEnabled</key>
 	<true/>
 	<key>UIAppFonts</key>
