@@ -1,0 +1,228 @@
+import { images } from '../assets/images';
+
+/**
+ * Exercise library and routine catalogue, ported verbatim from the mock's
+ * components/screens/TrainingScreens.tsx.
+ */
+export const richExerciseLibrary = {
+  "lat-pulldown": {
+    id: "lat-pulldown",
+    name: "Wide-Grip Lat Pulldown",
+    prescription: "4 Sets · 8–12 Reps · 90s Rest",
+    durationMin: 5,
+    setsCount: 4,
+    muscleGroup: "Back",
+    difficulty: "Beginner",
+    defaultRest: "90s",
+    logFormat: "Weight and reps",
+    targetVolume: "Back volume",
+    primaryMuscle: "Latissimus Dorsi (Outer & Lower fibers)",
+    secondaryMuscles: "Biceps Brachii, Brachialis, Teres Major, Rhomboids, Rear Deltoids",
+    overview:
+      "The wide-grip cable lat pulldown isolates vertical shoulder adduction and scapular downward rotation. It provides consistent cable resistance through the entire range of motion, allowing for strict lat targeting without lower back fatigue.",
+    instructions: [
+      "Adjust the thigh pads firmly against your upper legs so your hips remain locked down during the set.",
+      "Grasp the angled lat bar with a pronated overhand grip roughly 1.5 times shoulder width.",
+      "Sit down, lock your thighs under the pads, and lean back slightly (10–15 degrees) with chest lifted.",
+      "Initiate the movement by depressing your shoulder blades, then drive your elbows straight down toward your hips.",
+      "Pull the bar smoothly until it touches your upper chest or clavicle, squeezing your lats at peak contraction.",
+      "Slowly allow the bar to return upward under control (2–3 seconds), feeling a deep stretch in your upper lats.",
+    ],
+    coachCues: [
+      "Lead with your elbows, not your hands — imagine pulling from the back of your arms.",
+      "Keep your chest high and proud to meet the bar at the bottom.",
+      "Control the negative all the way to a full stretch without unlocking your shoulder girdle excessively.",
+    ],
+    commonMistakes: [
+      "Swinging the upper body aggressively backward using momentum to heave heavy weight.",
+      "Pulling the bar behind the neck, placing unnecessary shear stress on cervical vertebrae.",
+      "Cutting the top stretch short, missing out on loaded lat elongation.",
+    ],
+    safetyTips: [
+      "Always pull in front of your head to the upper chest.",
+      "Keep your lower spine neutral without hyperextending during the pull.",
+    ],
+    benefits: [
+      "Creates the classic tapered V-shape aesthetic by targeting latissimus width.",
+      "Excellent hypertrophy builder with low spinal axial fatigue.",
+      "Helps build vertical pulling endurance needed to master bodyweight pull-ups.",
+    ],
+    videoThumbnail: images.workoutLatPulldown,
+    sets: [
+      { setNum: 1, previous: "135 lbs × 12", weight: "135", reps: "12", completed: true },
+      { setNum: 2, previous: "150 lbs × 10", weight: "150", reps: "10", completed: false },
+      { setNum: 3, previous: "165 lbs × 8", weight: "165", reps: "8", completed: false },
+      { setNum: 4, previous: "165 lbs × 8", weight: "165", reps: "8", completed: false },
+    ],
+  },
+  "incline-bench": {
+    id: "incline-bench",
+    name: "Incline Barbell Bench Press",
+    prescription: "4 Sets · 6–10 Reps · 2m Rest",
+    durationMin: 6,
+    setsCount: 4,
+    muscleGroup: "Chest",
+    difficulty: "Intermediate",
+    defaultRest: "120s",
+    logFormat: "Weight and reps",
+    targetVolume: "Upper Chest Volume",
+    primaryMuscle: "Pectoralis Major (Clavicular Head / Upper Chest)",
+    secondaryMuscles: "Anterior Deltoids, Triceps Brachii, Serratus Anterior",
+    overview:
+      "The 30-degree incline barbell bench press emphasizes clavicular pec recruitment while developing pressing strength and shoulder stability across a full compound path.",
+    instructions: [
+      "Set an adjustable bench to a 30-degree incline and lie back with feet firmly planted on the floor.",
+      "Grip the barbell slightly wider than shoulder width with thumbs wrapped securely.",
+      "Unrack the bar and hold it directly above your upper chest with elbows locked and lats engaged.",
+      "Lower the bar under control over 2–3 seconds toward your upper clavicle area.",
+      "Press explosively through your palms, extending arms without excessively rolling shoulders forward.",
+    ],
+    coachCues: [
+      "Keep shoulder blades pinned back and down throughout the entire movement.",
+      "Tuck elbows slightly at a 45-degree angle rather than flaring out wide.",
+      "Drive your feet into the floor to generate leg drive and core stability.",
+    ],
+    commonMistakes: [
+      "Using an incline that is too steep (over 45°), turning the lift into a shoulder press.",
+      "Bouncing the barbell off the collarbone.",
+      "Lifting hips off the bench during heavy lockout.",
+    ],
+    safetyTips: [
+      "Always use a safety rack with catches set at chest height.",
+      "Avoid wrist extension by keeping the bar stacked directly over your forearms.",
+    ],
+    benefits: [
+      "Builds full upper chest thickness and clavicular pec definition.",
+      "Improves overhead lockout strength and anterior shoulder resilience.",
+    ],
+    videoThumbnail: images.workoutInclineBench,
+    sets: [
+      { setNum: 1, previous: "135 lbs × 10", weight: "135", reps: "10", completed: true },
+      { setNum: 2, previous: "155 lbs × 8", weight: "155", reps: "8", completed: false },
+      { setNum: 3, previous: "165 lbs × 6", weight: "165", reps: "6", completed: false },
+      { setNum: 4, previous: "165 lbs × 6", weight: "165", reps: "6", completed: false },
+    ],
+  },
+  "split-squat": {
+    id: "split-squat",
+    name: "Bulgarian Split Squat",
+    prescription: "4 Sets · 10–12 Reps / leg · 90s Rest",
+    durationMin: 5,
+    setsCount: 4,
+    muscleGroup: "Legs",
+    difficulty: "Intermediate",
+    defaultRest: "90s",
+    logFormat: "Weight and reps",
+    targetVolume: "Quad & Glute Volume",
+    primaryMuscle: "Quadriceps, Gluteus Maximus",
+    secondaryMuscles: "Hamstrings, Adductors, Core Stabilizers",
+    overview:
+      "The Bulgarian split squat is the gold-standard unilateral lower body exercise, fixing strength imbalances and building massive quad and glute hypertrophy with zero spinal axial loading.",
+    instructions: [
+      "Stand 2–3 feet in front of a flat bench and place the top of one foot securely onto the bench behind you.",
+      "Keep your torso upright or slightly hinged forward at 15 degrees for maximum glute engagement.",
+      "Lower your rear knee straight down until it almost touches the ground.",
+      "Drive through the mid-foot of your front leg to ascend back to the top position.",
+    ],
+    coachCues: [
+      "Think of 80% of your weight remaining on the working front heel.",
+      "Do not let your front knee collapse inward.",
+    ],
+    commonMistakes: [
+      "Placing the front foot too close to the bench, jamming the knee.",
+      "Pushing off the back leg rather than using the front leg.",
+    ],
+    safetyTips: ["Maintain balanced foot pressure across front tripod."],
+    benefits: [
+      "Corrects left-to-right leg strength deficits.",
+      "Massive glute and quad stretch under load.",
+    ],
+    videoThumbnail: images.workoutSplitSquat,
+    sets: [
+      { setNum: 1, previous: "45 lbs × 12", weight: "45", reps: "12", completed: true },
+      { setNum: 2, previous: "50 lbs × 10", weight: "50", reps: "10", completed: false },
+      { setNum: 3, previous: "55 lbs × 10", weight: "55", reps: "10", completed: false },
+      { setNum: 4, previous: "55 lbs × 10", weight: "55", reps: "10", completed: false },
+    ],
+  },
+};
+
+export const workoutRoutinesData = {
+  "push-day-a": {
+    id: "push-day-a",
+    title: "Full Body Workout",
+    subtitle: "Full Body & Compound Hypertrophy",
+    description: "A high-output compound split targeting chest, back, quads, and core for maximum athletic conditioning and fat loss.",
+    durationMin: 45,
+    calories: 380,
+    setsCount: 18,
+    level: "Intermediate",
+    heroImage: images.workoutFullbody,
+    exercises: [
+      richExerciseLibrary["lat-pulldown"],
+      richExerciseLibrary["incline-bench"],
+      richExerciseLibrary["split-squat"],
+    ],
+  },
+  "no-equipment": {
+    id: "no-equipment",
+    title: "No Equipment Workout",
+    subtitle: "Bodyweight Conditioning & Mobility",
+    description: "A type of physical exercise that requires no special equipment, instead using body weight as resistance for fat burn and mobility.",
+    durationMin: 35,
+    calories: 200,
+    setsCount: 13,
+    level: "Beginner",
+    heroImage: images.workoutNoEquipment,
+    exercises: [
+      richExerciseLibrary["split-squat"],
+      richExerciseLibrary["lat-pulldown"],
+      richExerciseLibrary["incline-bench"],
+    ],
+  },
+  "push-up-routine": {
+    id: "push-up-routine",
+    title: "Push-up Routine",
+    subtitle: "Calisthenic Upper Body Power",
+    description: "Intense chest, shoulder, and triceps bodyweight progression with tempo control and deficit variations.",
+    durationMin: 15,
+    calories: 120,
+    setsCount: 10,
+    level: "Intermediate",
+    heroImage: images.workoutPushups,
+    exercises: [
+      richExerciseLibrary["incline-bench"],
+      richExerciseLibrary["lat-pulldown"],
+    ],
+  },
+  "upper-beginner": {
+    id: "upper-beginner",
+    title: "Upper Body Beginner",
+    subtitle: "Posture & Joint Strength Foundations",
+    description: "Introductory upper body split focusing on mind-muscle connection, scapular control, and fundamental mechanics.",
+    durationMin: 15,
+    calories: 120,
+    setsCount: 8,
+    level: "Beginner",
+    heroImage: images.workoutLatPulldown,
+    exercises: [
+      richExerciseLibrary["lat-pulldown"],
+      richExerciseLibrary["incline-bench"],
+    ],
+  },
+  "lower-body": {
+    id: "lower-body",
+    title: "Lower Body Workout",
+    subtitle: "Posterior Chain & Glute Hypertrophy",
+    description: "Targeted quad, hamstring, and glute overload with progressive unilateral stability drills.",
+    durationMin: 15,
+    calories: 130,
+    setsCount: 12,
+    level: "Intermediate",
+    heroImage: images.workoutLowerbody,
+    exercises: [
+      richExerciseLibrary["split-squat"],
+      richExerciseLibrary["lat-pulldown"],
+    ],
+  },
+};

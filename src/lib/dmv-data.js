@@ -1,0 +1,442 @@
+/**
+ * Ported 1:1 from dmv-fitness-appv3/src/lib/dmv-data.ts.
+ * Seed data the api/* services resolve from until a backend exists.
+ */
+
+export const initialUserProfile = {
+  name: "Alicia Nguyen",
+  firstName: "Alicia",
+  email: "alicia.nguyen@gmail.com",
+  dob: "April 18, 1993",
+  sex: "Female",
+  height: "5 ft 6 in",
+  weight: 184.2,
+  goalWeight: 165.0,
+  goalType: "Lose fat",
+  activityLevel: "Moderately active",
+  pace: "1.0 lb / week",
+  plan: "Elite Annual",
+  coachName: "Marcus Bell",
+  streakDays: 41,
+  workoutsCompleted: 128,
+  badgesEarned: 5,
+};
+
+export const initialDailyTargets = {
+  maintenance: 2500,
+  deficit: 500,
+  calories: 2000,
+  protein: 150, // 30%
+  carbs: 220, // 44%
+  fat: 65, // 26%
+};
+
+export const initialDayTargets = [
+  { day: "Monday", dayShort: "Mon", calories: 2200, type: "Training", protein: 160, carbs: 245, fat: 65 },
+  { day: "Tuesday", dayShort: "Tue", calories: 2000, type: "Rest", protein: 150, carbs: 220, fat: 65 },
+  { day: "Wednesday", dayShort: "Wed", calories: 2200, type: "Training", protein: 160, carbs: 245, fat: 65 },
+  { day: "Thursday", dayShort: "Thu", calories: 1900, type: "Rest", protein: 150, carbs: 200, fat: 60 },
+  { day: "Friday", dayShort: "Fri", calories: 2200, type: "Training", protein: 160, carbs: 245, fat: 65 },
+  { day: "Saturday", dayShort: "Sat", calories: 2100, type: "Training", protein: 155, carbs: 230, fat: 65 },
+  { day: "Sunday", dayShort: "Sun", calories: 1900, type: "Rest", protein: 150, carbs: 200, fat: 60 },
+];
+
+export const initialTodayConsumed = {
+  calories: 1650,
+  protein: 110,
+  carbs: 160,
+  fat: 50,
+};
+
+export const initialLoggedMeals = [
+  {
+    id: "m1",
+    name: "Overnight Oats, Vanilla & Black Coffee",
+    serving: "1 jar + 1 mug",
+    source: "Generic",
+    verified: true,
+    calories: 420,
+    protein: 32,
+    carbs: 58,
+    fat: 8,
+    time: "7:12 am",
+    mealType: "breakfast",
+  },
+  {
+    id: "m2",
+    name: "High Protein Chicken Bowl & Greek Yogurt",
+    serving: "1 serving (450g)",
+    source: "Your recipe",
+    verified: true,
+    calories: 585,
+    protein: 44,
+    carbs: 64,
+    fat: 17,
+    time: "12:38 pm",
+    mealType: "lunch",
+  },
+  {
+    id: "m3",
+    name: "Whey Protein (1 scoop) & Banana",
+    serving: "1 shake + 1 medium banana",
+    source: "Generic",
+    verified: true,
+    calories: 245,
+    protein: 22,
+    carbs: 34,
+    fat: 2.5,
+    time: "3:20 pm",
+    mealType: "snack",
+  },
+];
+
+export const foodDatabase = [
+  {
+    id: "f1",
+    name: "Chicken Breast, grilled",
+    source: "Generic · 100 g",
+    calories: 165,
+    protein: 31,
+    carbs: 0,
+    fat: 3.6,
+    verified: true,
+    category: "all",
+  },
+  {
+    id: "f2",
+    name: "Chicken Breast, roasted",
+    source: "Generic · 100 g",
+    calories: 177,
+    protein: 30,
+    carbs: 0,
+    fat: 5.4,
+    verified: true,
+    category: "all",
+  },
+  {
+    id: "f3",
+    name: "High Protein Chicken Bowl",
+    source: "Your recipe · 1 serving",
+    calories: 585,
+    protein: 52,
+    carbs: 64,
+    fat: 17,
+    verified: true,
+    category: "meals",
+  },
+  {
+    id: "f4",
+    name: "Chicken Biryani, homemade",
+    source: "Community · 1 plate",
+    calories: 620,
+    protein: 34,
+    carbs: 74,
+    fat: 20,
+    verified: false,
+    category: "all",
+  },
+  {
+    id: "f5",
+    name: "Chobani Greek Yogurt, Plain Non-fat",
+    source: "Verified barcode · 170 g",
+    calories: 120,
+    protein: 20,
+    carbs: 6,
+    fat: 0,
+    verified: true,
+    category: "recent",
+  },
+  {
+    id: "f6",
+    name: "Beef Wrap, meal prep",
+    source: "Your recipe · 1 wrap",
+    calories: 540,
+    protein: 41,
+    carbs: 48,
+    fat: 19,
+    verified: true,
+    category: "meals",
+  },
+];
+
+export const savedRecipes = [
+  {
+    id: "r1",
+    name: "High Protein Chicken Bowl",
+    calories: 585,
+    protein: 52,
+    version: "v4",
+    state: "Shared",
+    items: "Grilled chicken, jasmine rice, black beans, salsa, avocado",
+  },
+  {
+    id: "r2",
+    name: "Overnight Oats, Vanilla",
+    calories: 340,
+    protein: 14,
+    version: "v2",
+    state: "Shared",
+    items: "Rolled oats, almond milk, chia seeds, whey isolate",
+  },
+  {
+    id: "r3",
+    name: "Beef Wrap, meal prep",
+    calories: 540,
+    protein: 41,
+    version: "v2",
+    state: "In review",
+    items: "Lean ground beef, whole wheat tortilla, spinach, pepperjack",
+  },
+  {
+    id: "r4",
+    name: "Post-lift shake",
+    calories: 245,
+    protein: 22,
+    version: "v1",
+    state: "Private",
+    items: "Whey isolate, skim milk, creatine 5g",
+  },
+];
+
+export const communityRecipes = [
+  {
+    id: "c1",
+    name: "High Protein Chicken Bowl",
+    author: "Hannah W.",
+    traction: "logged 1,284×",
+    calories: 585,
+    protein: 52,
+  },
+  {
+    id: "c2",
+    name: "Turkey Chili",
+    author: "DMV Kitchen",
+    traction: "logged 844×",
+    calories: 420,
+    protein: 45,
+  },
+  {
+    id: "c3",
+    name: "Overnight Oats, Vanilla",
+    author: "Priya R.",
+    traction: "logged 962×",
+    calories: 340,
+    protein: 14,
+  },
+  {
+    id: "c4",
+    name: "Mixed Berry Smoothie",
+    author: "DMV Kitchen",
+    traction: "logged 731×",
+    calories: 290,
+    protein: 26,
+  },
+];
+
+export const todayWorkoutExercises = [
+  {
+    id: "ex1",
+    name: "Barbell Bench Press",
+    prescription: "4 × 8-10",
+    muscleGroup: "Chest · 4 × 8-10 @ RPE 8",
+    coachCue: "Coach Marcus: control the eccentric, two seconds down.",
+    previousPerformance: "Last time: 155 lb × 10 · +20 lb since June",
+    sets: [
+      { setNumber: 1, weightLbs: 135, reps: 10, completed: true },
+      { setNumber: 2, weightLbs: 155, reps: 10, completed: true },
+      { setNumber: 3, weightLbs: 175, reps: 8, completed: false },
+      { setNumber: 4, weightLbs: 175, reps: 8, completed: false },
+    ],
+  },
+  {
+    id: "ex2",
+    name: "Seated Shoulder Press",
+    prescription: "3 × 10-12",
+    muscleGroup: "Shoulders · 3 × 10-12 @ RPE 8",
+    coachCue: "Coach Marcus: maintain neutral spine, push through elbows.",
+    previousPerformance: "Last time: 45 lb dumbbells × 10",
+    sets: [
+      { setNumber: 1, weightLbs: 40, reps: 12, completed: false },
+      { setNumber: 2, weightLbs: 45, reps: 10, completed: false },
+      { setNumber: 3, weightLbs: 45, reps: 10, completed: false },
+    ],
+  },
+  {
+    id: "ex3",
+    name: "Cable Fly",
+    prescription: "3 × 12-15",
+    muscleGroup: "Chest · 3 × 12-15 @ RPE 9",
+    coachCue: "Coach Marcus: hold the stretch for one second.",
+    previousPerformance: "Last time: 25 lb per side × 14",
+    sets: [
+      { setNumber: 1, weightLbs: 25, reps: 15, completed: false },
+      { setNumber: 2, weightLbs: 25, reps: 14, completed: false },
+      { setNumber: 3, weightLbs: 25, reps: 12, completed: false },
+    ],
+  },
+  {
+    id: "ex4",
+    name: "Triceps Pushdown",
+    prescription: "3 × 12-15",
+    muscleGroup: "Arms · 3 × 12-15 @ RPE 9",
+    coachCue: "Coach Marcus: flare the rope at the bottom peak contraction.",
+    previousPerformance: "Last time: 42.5 lb × 15",
+    sets: [
+      { setNumber: 1, weightLbs: 42.5, reps: 15, completed: false },
+      { setNumber: 2, weightLbs: 42.5, reps: 14, completed: false },
+      { setNumber: 3, weightLbs: 42.5, reps: 13, completed: false },
+    ],
+  },
+];
+
+export const checkinRecords = [
+  {
+    id: "chk-mar",
+    date: "March 1, 2026",
+    weightLbs: 196.0,
+    waistInches: 35.0,
+    note: "Starting day 1 with Coach Marcus.",
+    isPrivate: true,
+    frontPhoto: "mar-front",
+    sidePhoto: "mar-side",
+  },
+  {
+    id: "chk-jun",
+    date: "June 1, 2026",
+    weightLbs: 189.8,
+    waistInches: 33.2,
+    note: "Deficit is feeling consistent now.",
+    isPrivate: true,
+    frontPhoto: "jun-front",
+    sidePhoto: "jun-side",
+  },
+  {
+    id: "chk-aug",
+    date: "August 1, 2026",
+    weightLbs: 184.2,
+    waistInches: 31.5,
+    note: "Shoulders finally look wider.",
+    isPrivate: true,
+    frontPhoto: "aug-front",
+    sidePhoto: "aug-side",
+    backPhoto: "aug-back",
+  },
+];
+
+export const badgesList = [
+  { id: "b1", title: "41-day streak", icon: "flame", state: "earned", label: "41-DAY STREAK" },
+  { id: "b2", title: "100 workouts", icon: "trophy", state: "earned", label: "100 WORKOUTS" },
+  { id: "b3", title: "10 lb down", icon: "graph-down", state: "earned", label: "10 LB DOWN" },
+  { id: "b4", title: "Protein pro", icon: "egg-fried", state: "earned", label: "PROTEIN PRO" },
+  { id: "b5", title: "Perfect week ×6", icon: "calendar-check", state: "earned", label: "PERFECT WEEK ×6" },
+  { id: "b6", title: "30 lb down", icon: "lock", state: "locked", label: "30 LB DOWN" },
+];
+
+export const notificationsList = [
+  {
+    id: "n1",
+    title: "Lunch reminder",
+    body: "You haven't logged lunch yet.",
+    when: "1:30 pm",
+    unread: true,
+  },
+  {
+    id: "n2",
+    title: "New personal record",
+    body: "Bench press 175 lb × 8. That's a PR.",
+    when: "Yesterday",
+    unread: false,
+  },
+  {
+    id: "n3",
+    title: "Coach Marcus",
+    body: "Updated your program for week 3.",
+    when: "2 days ago",
+    unread: false,
+  },
+  {
+    id: "n4",
+    title: "30-day streak",
+    body: "A full month of logging. Nice work.",
+    when: "Aug 22",
+    unread: false,
+  },
+  {
+    id: "n5",
+    title: "Trial reminder",
+    body: "Your free trial ends in 2 days.",
+    when: "Aug 20",
+    unread: false,
+  },
+];
+
+export const spanishHeadlines = {
+  "EVERYTHING IN ONE PLACE": "TODO EN UN SOLO LUGAR",
+  "YOUR COACH WRITES THE PLAN": "TU ENTRENADOR ESCRIBE EL PLAN",
+  "SCAN IT, LOG IT, DONE": "ESCANEA, REGISTRA Y LISTO",
+  "WATCH IT ADD UP": "MIRA CÓMO SE SUMA EL PROGRESO",
+  "WELCOME BACK": "BIENVENIDO DE VUELTA",
+  "START YOUR ACCOUNT": "INICIA TU CUENTA",
+  "CHECK YOUR INBOX": "REVISA TU BANDEJA DE ENTRADA",
+  "WHAT ARE YOU HERE FOR?": "¿CUÁL ES TU OBJETIVO PRINCIPAL?",
+  "A BIT ABOUT YOU": "UN POCO SOBRE TI",
+  "HOW ACTIVE ARE YOU?": "¿QUÉ TAN ACTIVO ERES A DIARIO?",
+  "WHERE ARE YOU HEADED?": "¿A DÓNDE TE DIRIGES?",
+  "YOUR DAILY TARGETS": "TUS OBJETIVOS DIARIOS",
+  "NOT EVERY DAY IS THE SAME": "NO TODOS LOS DÍAS SON IGUALES",
+  "PICK YOUR PLAN": "ELIGE TU PLAN IDEAL",
+  "YOU'RE SET, ALICIA": "ESTÁS LISTA, ALICIA",
+  "TODAY'S TARGETS": "OBJETIVOS DE HOY",
+  "BARBELL BENCH PRESS": "PRESS DE BANCA CON BARRA",
+  "PUSH DAY A DONE": "DÍA DE EMPUJE A TERMINADO",
+};
+
+/** Screen ids from the mock, mapped to React Navigation route names. */
+export const SCREEN_ROUTES = {
+  '01-splash': 'SplashScreen',
+  '02-onboarding-1': 'OnboardingScreen',
+  '06-signin': 'SignInScreen',
+  '06b-forgot-password': 'ForgotPasswordScreen',
+  '06c-reset-password': 'ResetPasswordScreen',
+  '07-create-account': 'CreateAccountScreen',
+  '08-verify-email': 'VerifyEmailScreen',
+  '09-goal': 'GoalScreen',
+  '10-about-you': 'AboutYouScreen',
+  '11-activity': 'ActivityScreen',
+  '12-target-pace': 'TargetPaceScreen',
+  '13-macro-builder': 'MacroBuilderScreen',
+  '14-targets-by-day': 'TargetsByDayScreen',
+  '15-choose-plan': 'ChoosePlanScreen',
+  '16-payment': 'PaymentScreen',
+  '17-setup-complete': 'SetupCompleteScreen',
+  '18-today': 'TodayTab',
+  '19-diary': 'DiaryTab',
+  '20-search-food': 'SearchFoodScreen',
+  '21-barcode-scan': 'BarcodeScanScreen',
+  '22-food-detail': 'FoodDetailScreen',
+  '23-add-food-manual': 'AddFoodManualScreen',
+  '24-meals-recipes': 'MealsRecipesScreen',
+  '25-community-library': 'CommunityScreen',
+  '26-today-workout': 'TrainTab',
+  '27-logging-workout': 'LoggingWorkoutScreen',
+  '28-workout-complete': 'WorkoutCompleteScreen',
+  '29-progress': 'ProgressScreen',
+  '30-new-checkin': 'NewCheckinScreen',
+  '31-compare-checkins': 'CompareCheckinsScreen',
+  '32-achievements': 'AchievementsScreen',
+  '33-notifications': 'NotificationsScreen',
+  '34-profile': 'MeTab',
+  '35-health-devices': 'HealthDevicesScreen',
+  '36-subscription': 'SubscriptionScreen',
+  '37-privacy-sharing': 'PrivacySharingScreen',
+  '38-coach-chat': 'CoachChatScreen',
+};
+
+/** Quick actions from the FAB action sheet → route names. */
+export const ACTION_ROUTES = {
+  'log-food': 'SearchFoodScreen',
+  'scan-barcode': 'BarcodeScanScreen',
+  'start-workout': 'LoggingWorkoutScreen',
+  'new-checkin': 'NewCheckinScreen',
+  'log-weight': 'ProgressScreen',
+};
